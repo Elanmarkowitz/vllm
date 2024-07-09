@@ -146,6 +146,7 @@ class ModelConfig:
         self.max_seq_len_to_capture = (max_seq_len_to_capture
                                        or max_context_len_to_capture)
         self.max_logprobs = max_logprobs
+        self.return_hidden_states = return_hidden_states
         self.disable_sliding_window = disable_sliding_window
         self.skip_tokenizer_init = skip_tokenizer_init
 
