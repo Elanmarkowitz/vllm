@@ -210,6 +210,9 @@ class LLMEngine:
             scheduler_config.use_v2_block_manager,
             cache_config.enable_prefix_caching,
         )
+        logger.debug(
+            f"Additional configs: return_hidden_states {model_config.return_hidden_states}"
+        )
         # TODO(woosuk): Print more configs in debug mode.
 
         self.model_config = model_config

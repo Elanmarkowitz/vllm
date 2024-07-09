@@ -1265,7 +1265,7 @@ class ModelRunner(GPUModelRunnerBase[ModelInputForGPUWithSamplingMetadata]):
             sampling_metadata=model_input.sampling_metadata,
         )
 
-        if self.return_hidden_states:
+        if self.return_hidden_states or self.model_config.return_hidden_states:
             # we only need to pass hidden states of most recent token
             assert model_input.sampling_metadata is not None
             indices = model_input.sampling_metadata.selected_token_indices

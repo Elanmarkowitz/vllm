@@ -49,6 +49,7 @@ class EngineArgs:
     max_num_batched_tokens: Optional[int] = None
     max_num_seqs: int = 256
     max_logprobs: int = 20  # Default value for OpenAI Chat Completions API
+    return_hidden_states: bool = False
     disable_log_stats: bool = False
     revision: Optional[str] = None
     code_revision: Optional[str] = None
